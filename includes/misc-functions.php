@@ -344,6 +344,7 @@ function rpress_get_currencies() {
 		'RIAL' => __( 'Iranian Rial (&#65020;)', 'restro-press' ),
 		'RUB'  => __( 'Russian Rubles', 'restro-press' ),
 		'AOA'  => __( 'Angolan Kwanza', 'restro-press' ),
+		'NGN'  => __( 'Nigerian Naira (&#8358;)', 'restro-press' ),
 	);
 
 	return apply_filters( 'rpress_currencies', $currencies );
@@ -397,6 +398,9 @@ function rpress_currency_symbol( $currency = '' ) {
 			break;
 		case "AOA" :
 			$symbol = 'Kz';
+			break;
+		case "NGN" :
+			$symbol = '&#8358;';
 			break;
 		default :
 			$symbol = $currency;
